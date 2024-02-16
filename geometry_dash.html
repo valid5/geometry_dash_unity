@@ -82,28 +82,6 @@ function tapOrClick(event) {
  gameInstance.SendMessage('AudioMainController', 'JSCallUnity', 1);
  }
  }
- function fullScreenAPI(){
- var ua = navigator.userAgent.toLowerCase();
- var isAndroid = ua.indexOf("android") > -1;
- if(isAndroid) {
- GoFullScreen(document.documentElement);
- }
- }
-function GoFullScreen(element) {
- if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {
- if(element.requestFullscreen && document.fullscreenEnabled){
- element.requestFullscreen();
- } 
- else if(element.mozRequestFullScreen){
- element.mozRequestFullScreen();
- }
- else if(element.webkitRequestFullscreen){
- element.webkitRequestFullscreen();
- } 
- else if(element.msRequestFullscreen){
- element.msRequestFullscreen();
- }
- }
  }</script>
 		<!--End Game--></body></html>
 
